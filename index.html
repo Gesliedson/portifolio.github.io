@@ -1,159 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <style>
-        /* Estilos Globais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-
-        a {
-            color: #4f46e5;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #818cf8;
-        }
-
-        /* Container Principal */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Cabeçalho */
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #a3a3a3;
-        }
-
-        /* Seções */
-        section {
-            margin-bottom: 40px;
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid #2e2e2e;
-        }
-
-        section h2 {
-            color: #ffffff;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #4f46e5;
-            padding-bottom: 5px;
-            display: inline-block;
-        }
-
-        /* Lista de Projetos */
-        .project-card {
-            background-color: #252525;
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            border: 1px solid #333;
-        }
-
-        .project-card h3 {
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .project-card p {
-            color: #a3a3a3;
-            margin-bottom: 12px;
-        }
-
-        /* Links de Contato */
-        .contact-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            color: #737373;
-            font-size: 0.9rem;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BigInt — Calculadora</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <!-- Cabeçalho Principal -->
-        <header>
-            <h1>*Sr.Engenheiro*</h1>
-            <p>Desenvolvedor(a) Software / Web / Mobile</p>
-        </header>
-
-        <!-- Sobre Mim -->
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Olá! Sou um entusiasta da tecnologia focado em criar soluções eficientes e elegantes. Tenho experiência com tecnologias modernas e adoro resolver problemas complexos através do código.</p>
-        </section>
-
-        <!-- Projetos -->
-        <section id="projetos">
-            <h2>Projetos em Destaque</h2>
-            
-            <div class="project-card">
-                <h3>Nome do Projeto 1</h3>
-                <p>Breve descrição do que o projeto faz, quais problemas ele resolve e quais tecnologias foram utilizadas.</p>
-                <a href="#" target="_blank">Ver Repositório &rarr;</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Nome do Projeto 2</h3>
-                <p>Outro exemplo de projeto. Você pode adicionar quantos cards destes precisar para demonstrar seu trabalho.</p>
-                <a href="#" target="_blank">Acessar Site do Projeto &rarr;</a>
-            </div>
-        </section>
-
-        <!-- Contato -->
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Vamos conversar? Você pode me encontrar nas redes abaixo:</p>
-            <br>
-            <div class="contact-links">
-                <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
-                <a href="https://github.com" target="_blank">💻 GitHub</a>
-                <a href="mailto:seu-email@email.com">✉️ E-mail</a>
-            </div>
-        </section>
-
-        <!-- Rodapé -->
-        <footer>
-            <p>&copy; 2026 Seu Nome. Criado com HTML e CSS.</p>
-        </footer>
+<main class="app">
+  <header>
+    <div>
+      <p class="eyebrow">C++ • BigInt</p>
+      <h1>Inteiros de tamanho ilimitado</h1>
+      <p class="subtitle">Uma interface web para explorar as operações do seu projeto BigInt.</p>
     </div>
+    <a class="github" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
 
+  <section class="card inputs">
+    <label>A
+      <input id="a" value="12345678901234567890" inputmode="numeric" autocomplete="off">
+    </label>
+    <label>B
+      <input id="b" value="9876543210" inputmode="numeric" autocomplete="off">
+    </label>
+  </section>
+
+  <section class="card result-card">
+    <div class="result-head"><span>Resultado</span><button id="copy">Copiar</button></div>
+    <pre id="result">Pronto.</pre>
+    <p id="status" class="status"></p>
+  </section>
+
+  <section class="card">
+    <div class="section-title">Aritmética</div>
+    <div class="grid">
+      <button data-op="add">A + B</button><button data-op="sub">A − B</button>
+      <button data-op="mul">A × B</button><button data-op="div">A ÷ B</button>
+      <button data-op="mod">A % B</button><button data-op="factA">!A</button>
+      <button data-op="factB">!B</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="section-title">Outras operações</div>
+    <div class="grid">
+      <button data-op="lt">A &lt; B</button><button data-op="eq">A = B</button>
+      <button data-op="gt">A &gt; B</button><button data-op="abs">abs(A)</button>
+      <button data-op="neg">−A</button><button data-op="inc">A++</button>
+      <button data-op="dec">A--</button><button data-op="shl">A &lt;&lt; B</button>
+      <button data-op="shr">A &gt;&gt; B</button><button data-op="toint">toInt(A)</button>
+    </div>
+  </section>
+
+  <footer>
+    <span>Baseado no projeto acadêmico BigInt em C++.</span>
+    <span>Web demo • GitHub Pages ready</span>
+  </footer>
+</main>
+<script src="app.js"></script>
 </body>
 </html>
