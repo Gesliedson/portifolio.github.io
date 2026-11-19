@@ -1,147 +1,162 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio acadêmico e profissional de [Seu nome].">
-  <title>Gesliedson Silva | Portfólio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="electrical-background" aria-hidden="true">
-    <svg viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <g class="circuit-lines" fill="none" stroke="#012849" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M-40 160 H150 V90 H300 V210 H410 M150 90 V35 H230"/>
-        <path d="M-20 700 H180 V610 H310 V760 H430 V680 H520"/>
-        <path d="M1480 130 H1280 V220 H1160 V110 H1040 V180 H970"/>
-        <path d="M1470 770 H1300 V850 H1140 V730 H1030 V800 H940"/>
-        <path d="M600 -30 V100 H720 V190 H650 V280 H760"/>
-        <path d="M820 1030 V900 H710 V820 H790 V710 H680"/>
-        <path d="M350 430 H470 V360 H570 M1080 470 H960 V550 H850"/>
-        <path d="M220 900 V820 H300 M1220 30 V80 H1320"/>
-      </g>
-      <g class="circuit-symbols" fill="none" stroke="#e43100" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Resistor -->
-        <path d="M280 210 h28 l12 -18 20 36 20 -36 20 36 12 -18 h28"/>
-        <!-- Capacitor -->
-        <path d="M1120 300 v-38 m-22 0 h44 m-44 18 h44 m-22 0 v42"/>
-        <!-- Inductor -->
-        <path d="M420 760 v-20 c0 -28 42 -28 42 0 c0 -28 42 -28 42 0 c0 -28 42 -28 42 0 v20"/>
-        <!-- Diode -->
-        <path d="M1000 650 h34 l34 -25 v50 l-34 -25 M1068 625 v50 M1068 650 h38"/>
-        <!-- Lightning / energy -->
-        <path d="M760 390 l-35 55 h30 l-18 48 55 -67 h-31 l18 -36"/>
-        <!-- Wave signal -->
-        <path d="M170 500 h28 l18 -28 28 56 28 -56 28 56 18 -28 h28"/>
-      </g>
-      <g class="moving-current" fill="none" stroke="#e43100" stroke-width="5" stroke-linecap="round">
-        <path class="current-path" d="M80 320 H250 V390 H390 M1060 690 H1210 V610 H1380"/>
-        <path class="wave-path" d="M520 120 C550 70 580 170 610 120 S670 70 700 120 S760 170 790 120"/>
-      </g>
-      <g class="extra-symbols" fill="none" stroke="#012849" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Motor / bobina -->
-        <circle cx="1240" cy="440" r="48"/><path d="M1215 440 h18 l12 -22 20 44 12 -22 h18"/>
-        <!-- Bateria -->
-        <path d="M300 560 v-28 m-13 0 h26 m-13 0 v-30 m-13 0 h26 m-13 0 v-25"/>
-        <!-- Terra -->
-        <path d="M900 880 v-35 m-28 0 h56 m-46 12 h36 m-25 12 h14"/>
-      </g>
-      <g class="electron-particles">
-        <circle r="7"><animateMotion dur="8s" repeatCount="indefinite" path="M-20 160 H150 V90 H300 V210 H410"/></circle>
-        <circle r="6"><animateMotion dur="10s" repeatCount="indefinite" path="M1480 130 H1280 V220 H1160 V110 H1040"/></circle>
-        <circle r="6"><animateMotion dur="9s" repeatCount="indefinite" path="M-20 700 H180 V610 H310 V760 H430"/></circle>
-      </g>
-      <g class="circuit-nodes" fill="#012849">
-        <circle class="node node-a" cx="150" cy="90" r="8"/><circle class="node node-b" cx="310" cy="760" r="8"/>
-        <circle class="node node-c" cx="1280" cy="220" r="8"/><circle class="node node-d" cx="1140" cy="850" r="8"/>
-        <circle class="node node-e" cx="720" cy="190" r="8"/><circle class="node node-f" cx="710" cy="820" r="8"/>
-        <circle class="node node-g" cx="470" cy="360" r="8"/><circle class="node node-h" cx="960" cy="550" r="8"/>
-      </g>
-    </svg>
-  </div>
-  <div class="page-shell">
-    <header class="hero reveal">
-      <div class="identity reveal">
-        <div class="avatar">
-          <!-- Coloque sua foto em assets/foto.jpg e mantenha este caminho. -->
-          <img src="assets/foto.jpg" alt="Gesliedson"
-               onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');">
-          <span class="avatar-fallback">SUA<br>FOTO</span>
-        </div>
-        <div class="identity-text">
-          <p class="eyebrow">PORTFÓLIO • ENGENHARIA </p>
-          <h1>Gesliedson</h1>
-          <p class="role">Engenharia Elétrica <span> / </span> Eletrônica <span> / </span> Automação</p>
-        </div>
-      </div>
-    </header>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-    <main>
-      <section class="about panel reveal" aria-label="Apresentação pessoal">
-        <p class="about-copy">
-          Estudante de Engenharia Elétrica, tem interesse em geração de energia, eletrônica e pesquisa.
-          Atualmente está no segundo semestre e já domina parte das boas práticas de programação
-          C/C++, tendo aprendido essas habilidades na disciplina de programação avançada por meio de dois
-          projetos exigidos na disciplina.
-        </p>
-        <div class="tags">
-          <span>Eletrônica</span><span>Automação</span><span>Programação</span>
-          <span>Sistemas embarcados</span>
-        </div>
-      </section>
+:root {
+  --orange: #ff9412;
+  --red: #e43100;
+  --navy: #012849;
+  --teal: #17617e;
+  --paper: #ffe2bd;
+  --ink: #092c42;
+  --muted: #64737b;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: 'Manrope', sans-serif; overflow-x: hidden;
+}
+.electrical-background {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  opacity: .20; overflow: hidden; animation: circuit-drift 42s ease-in-out infinite alternate;
+}
+.electrical-background svg { width: 100%; height: 100%; display: block; }
+.circuit-lines { opacity: .9; }
+.circuit-symbols { opacity: .95; }
+.node { transform-box: fill-box; transform-origin: center; animation: node-pulse 3.8s ease-in-out infinite; }
+.node-b, .node-d, .node-f, .node-h { animation-delay: 1.9s; }
+.page-shell { position: relative; z-index: 1; width: min(1080px, calc(100% - 48px)); margin: 0 auto; }
+.hero {
+  position: relative; overflow: hidden; margin-top: 34px; padding: 42px;
+  background: var(--navy); color: white; border-radius: 8px;
+}
+.hero::after {
+  content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 12px;
+  background: linear-gradient(to bottom, var(--orange) 0 25%, var(--red) 25% 50%, var(--teal) 50% 75%, var(--orange) 75%);
+}
+.identity { display: flex; align-items: center; gap: 26px; position: relative; z-index: 1; }
+.avatar {
+  width: 164px; height: 164px; flex: 0 0 164px; border-radius: 50%;
+  overflow: hidden; border: 4px solid var(--orange); background: var(--teal);
+  display: grid; place-items: center; position: relative;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-fallback {
+  display: none; position: absolute; text-align: center; color: white;
+  font: 11px 'DM Mono', monospace; letter-spacing: 2px; line-height: 1.6;
+}
+.avatar.no-photo .avatar-fallback { display: block; }
+.eyebrow, .project-topline, .tech-list, footer {
+  font-family: 'DM Mono', monospace;
+}
+.eyebrow { color: var(--orange); font-size: 11px; letter-spacing: 2px; }
+h1 { margin: 8px 0 5px; font-size: clamp(30px, 5vw, 48px); line-height: 1.1; }
+.role { margin: 0; color: #c4d4dc; font-size: 14px; }
+.role span { color: var(--orange); padding: 0 5px; }
+main { padding: 28px 0 10px; }
+.panel { background: #ff9412; border: 1px solid #f08a0b; border-radius: 8px; padding: 30px 34px; }
+.section-heading { display: flex; align-items: center; gap: 14px; }
+h2 { margin: 0; font-size: 22px; letter-spacing: -.6px; }
+.about-copy { max-width: 780px; color: #3d2a16; line-height: 1.85; font-size: 14px; margin: 20px 0; }
+.tags, .tech-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags span, .tech-list span {
+  border: 1px solid rgba(1,40,73,.28); padding: 7px 10px; border-radius: 3px;
+  color: var(--navy); font-size: 11px;
+}
+.projects { padding: 42px 0 24px; }
+.projects-heading { flex-wrap: wrap; }
+.projects-heading p { width: 100%; margin: -5px 0 0; color: var(--muted); font-size: 13px; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+.project-card {
+  min-height: 270px; padding: 25px; border-radius: 7px; color: white;
+  display: flex; flex-direction: column; position: relative; overflow: hidden;
+}
+.project-orange { background: #287fa3; }
+.project-teal { background: #3b91b3; }
+.project-card::after {
+  content: ''; position: absolute; width: 140px; height: 140px; border: 1px solid rgba(255,255,255,.16);
+  border-radius: 50%; right: -50px; top: 55px; box-shadow: 0 0 0 18px rgba(255,255,255,.035), 0 0 0 38px rgba(255,255,255,.025);
+}
+.project-topline { display: flex; justify-content: space-between; color: rgba(255,255,255,.75); font-size: 10px; letter-spacing: 1.5px; }
+.project-symbol { color: var(--orange); font-size: 20px; }
+.project-card h3 { font-size: 21px; margin: 26px 0 10px; max-width: 85%; }
+.project-card p { color: rgba(255,255,255,.84); font-size: 13px; line-height: 1.7; max-width: 95%; margin: 0 0 22px; }
+.project-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: end; gap: 14px; flex-wrap: wrap; }
+.tech-list span { border-color: rgba(255,255,255,.35); color: white; }
+.project-footer a { color: white; text-decoration: none; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.project-footer a span { color: var(--orange); padding-left: 4px; }
+footer {
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  padding: 24px 0 34px; color: #718087; font-size: 10px;
+  border-top: 1px solid #ddd7ce; letter-spacing: .2px;
+}
+footer b { color: var(--red); }
+footer a { color: var(--teal); text-decoration: none; }
+@media (max-width: 650px) {
+  .page-shell { width: min(100% - 28px, 520px); }
+  .hero { margin-top: 14px; padding: 28px 22px; }
+  .identity { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .avatar { width: 136px; height: 136px; flex-basis: 136px; }
+  .role { max-width: 250px; line-height: 1.8; }
+  .panel { padding: 24px 20px; }
+  .project-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; }
+}
 
-      <section class="projects reveal" aria-labelledby="projects-title">
-        <div class="section-heading projects-heading reveal">
-          <h2 id="projects-title">Projetos em destaque</h2>
-          <p>Ideias, estudos e soluções desenvolvidas.</p>
-        </div>
 
-        <div class="project-grid">
-          <article class="project-card project-orange reveal">
-            <div class="project-topline"><span>PROJETO</span><span class="project-symbol">↗</span></div>
-            <h3>Projeto BigInt</h3>
-            <p>Projeto desenvolvido para representar números inteiros de tamanho qualquer em C++ usando a noção de alocação dinâmica.</p>
-            <div class="project-footer">
-              <div class="tech-list"><span> C++</span></div>
-              <a href="#" aria-label="Abrir repositório do primeiro projeto">Ver repositório <span>↗</span></a>
-            </div>
-          </article>
+/* Movimento discreto para dar vida à página sem competir com o conteúdo. */
+@keyframes circuit-drift {
+  from { transform: translate3d(-8px, -5px, 0) scale(1); }
+  to { transform: translate3d(8px, 7px, 0) scale(1.025); }
+}
+@keyframes node-pulse {
+  0%, 100% { opacity: .55; transform: scale(.85); }
+  50% { opacity: 1; transform: scale(1.35); }
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.project-card { transition: transform .28s ease, box-shadow .28s ease; }
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 30px rgba(1, 40, 73, .18);
+}
+.avatar { transition: transform .35s ease, box-shadow .35s ease; }
+.avatar:hover { transform: scale(1.045); box-shadow: 0 0 0 7px rgba(255,148,18,.18); }
+.project-footer a { transition: letter-spacing .2s ease; }
+.project-footer a:hover { letter-spacing: .4px; }
 
-          <article class="project-card project-teal reveal">
-            <div class="project-topline"><span>PROJETO</span><span class="project-symbol">↗</span></div>
-            <h3>Projeto Planejador de Caminhos</h3>
-            <p>Projeto desenvolvido para encontar o menor caminho entre duas cidades do Rio Grande do Norte usando o algoritmo A*.</p>
-            <div class="project-footer">
-              <div class="tech-list"><span>C++</span></div>
-              <a href="#" aria-label="Abrir repositório do segundo projeto">Ver repositório <span>↗</span></a>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
 
-    <footer class="reveal">
-      <span>© <span id="year"></span> [Seu nome]</span>
-      <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
-    </footer>
-  </div>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Observa continuamente a entrada e a saída dos blocos da área visível.
-    // Ao sair, o bloco desaparece suavemente; ao voltar, reaparece.
-    const revealItems = document.querySelectorAll(".reveal");
-    const revealObserver = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        } else {
-          entry.target.classList.remove("is-visible");
-        }
-      }
-    }, { threshold: 0, rootMargin: "-3% 0px -3% 0px" });
 
-    revealItems.forEach((item) => revealObserver.observe(item));
-  </script>
-</body>
-</html>
+/* Fade bidirecional: os blocos somem ao sair da viewport e reaparecem ao voltar. */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity 650ms ease, transform 650ms cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+/* Mais elementos móveis inspirados em circuitos, corrente alternada e elétrons. */
+.electrical-background { opacity: .20; }
+.moving-current { opacity: .9; stroke-dasharray: 12 18; animation: current-flow 5s linear infinite; }
+.wave-path { stroke-dasharray: 8 12; animation: wave-flow 4s linear infinite; }
+.extra-symbols { opacity: .85; animation: symbol-float 12s ease-in-out infinite alternate; transform-origin: center; }
+.electron-particles circle { fill: #ff9412; stroke: #012849; stroke-width: 2; filter: drop-shadow(0 0 7px rgba(255,148,18,.8)); }
+@keyframes current-flow { to { stroke-dashoffset: -120; } }
+@keyframes wave-flow { to { stroke-dashoffset: -80; } }
+@keyframes symbol-float { from { transform: translateY(-9px) rotate(-1deg); } to { transform: translateY(10px) rotate(1deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .moving-current, .wave-path, .extra-symbols { animation: none; }
+  .electron-particles animateMotion { display: none; }
+}
